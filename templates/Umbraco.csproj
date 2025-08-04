@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MyUmbracoProject</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Umbraco CMS -->
+    <PackageReference Include="Umbraco.Cms" Version="13.0.0" />
+    
+    <!-- Azure Storage for Media Files -->
+    <PackageReference Include="Umbraco.Storage.AzureBlob" Version="13.0.0" />
+    
+    <!-- Application Insights for Monitoring -->
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    
+    <!-- Serilog for Logging -->
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    
+    <!-- Azure Key Vault Configuration -->
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
+    <PackageReference Include="Azure.Identity" Version="1.10.4" />
+    
+    <!-- Health Checks -->
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="7.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.AzureStorage" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="8.0.0" />
+    
+    <!-- Additional Umbraco Packages (Optional) -->
+    <PackageReference Include="Umbraco.Forms" Version="13.0.0" />
+    <PackageReference Include="Umbraco.Deploy.OnPrem" Version="13.0.0" />
+    
+    <!-- Performance and Caching -->
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="appsettings.Staging.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="appsettings.Production.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App_Plugins\" />
+    <Folder Include="Views\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
