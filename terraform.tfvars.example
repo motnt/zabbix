@@ -1,0 +1,46 @@
+# Resource Group Configuration
+resource_group_name = "umbraco-rg"
+location            = "East US"
+
+# Tags for all resources
+tags = {
+  Environment = "Production"
+  Project     = "Umbraco"
+  ManagedBy   = "Terraform"
+  Owner       = "YourName"
+  CostCenter  = "IT"
+}
+
+# App Service Plan Configuration
+app_service_plan_sku = "P1v3"
+
+# SQL Server Configuration
+sql_admin_username = "umbraco_admin"
+sql_admin_password = "YourSecurePassword123!"  # Change this to a secure password
+
+# Azure AD Configuration (optional)
+# azure_ad_admin_object_id = "00000000-0000-0000-0000-000000000000"
+
+# Feature Flags
+enable_private_endpoints     = true
+enable_cdn                   = true
+enable_key_vault             = true
+enable_application_insights  = true
+enable_auto_scaling          = false
+
+# SQL Database Configuration
+sql_database_sku         = "Basic"
+sql_database_max_size_gb = 2
+
+# Storage Account Configuration
+storage_account_tier        = "Standard"
+storage_account_replication = "LRS"
+
+# Network Configuration
+vnet_address_space           = ["10.0.0.0/16"]
+app_subnet_address_prefix    = "10.0.1.0/24"
+sql_subnet_address_prefix    = "10.0.2.0/24"
+
+# Auto Scaling Configuration (if enabled)
+auto_scaling_min_instances = 1
+auto_scaling_max_instances = 10

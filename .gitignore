@@ -1,0 +1,81 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+tfplan
+tfplan.*
+
+# Terraform variables (may contain sensitive data)
+terraform.tfvars
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Azure CLI files
+.azure/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Backup files
+backup/
+backups/
+
+# Documentation build
+docs/_build/
+
+# Node modules (if any)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Windows
+*.lnk
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Local configuration
+local.tfvars
+local.auto.tfvars
