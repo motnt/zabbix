@@ -1,0 +1,32 @@
+# Project Configuration
+project_name = "umbraco-app"
+resource_group_name = "rg-umbraco-app"
+location = "East US"
+
+# Security Configuration
+admin_ip_address = "YOUR_IP_ADDRESS/32"  # Replace with your IP address
+
+# SQL Server Configuration
+sql_admin_username = "sqladmin"
+sql_admin_password = "YourSecurePassword123!"  # Replace with a secure password
+
+# App Service Configuration
+app_service_plan_sku = "P1v2"
+
+# SQL Database Configuration
+sql_database_sku = "Basic"
+sql_database_max_size_gb = 2
+
+# Feature Flags
+enable_ssl = true
+enable_cdn = true
+enable_monitoring = true
+
+# Tags
+tags = {
+  Environment = "Production"
+  Project     = "Umbraco"
+  ManagedBy   = "Terraform"
+  Owner       = "YourName"
+  CostCenter  = "IT"
+}
